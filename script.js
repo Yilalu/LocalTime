@@ -7,11 +7,11 @@ function updateTime() {
     if (hours >= 23 || hours < 5) {
       timePeriod = "ጥዋት";
     } else if (hours >= 5 && hours < 10) {
-      timePeriod = "ቀን";
+      timePeriod = "ሌሊት";
     } else if (hours >= 10 && hours < 16) {
       timePeriod = "ምሽት";
     } else if (hours >= 17 && hours < 23) {
-      timePeriod = "ሌሊት";
+      timePeriod = "ቀን";
     }
   
     let minutes = now.getMinutes();
