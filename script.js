@@ -2,7 +2,7 @@
   function updateTime() {
     const container = document.getElementById('time');
     const now = new Date();
-    let hours = now.getHours();
+    let hours = now.getHours() + 1;
     let timePeriod = "AM";
   
     if (hours >= 12) {
@@ -17,9 +17,9 @@
     if (hours >= 6 && hours < 10) {
       timePeriod = "ጥዋት";
     } else if (hours >= 10 && hours < 16) {
-      timePeriod = "ሌሊት";
-    } else if (hours >= 16 && hours < 22) {
       timePeriod = "ቀን";
+    } else if (hours >= 16 && hours < 22) {
+      timePeriod = "ሌሊት";
     } else if (hours >= 22 || hours < 6) {
       timePeriod = "ምሽት";
     }
