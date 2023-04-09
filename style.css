@@ -1,0 +1,47 @@
+html, body {
+    background-image: url('flag.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Georgia', serif;
+    color: #fff;
+  }
+  
+  .container {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    margin: 100px auto;
+    max-width: 500px;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 50px;
+    margin-top: 0;
+    text-shadow: 2px 2px 4px #000000;
+  }
+  
+  p {
+    font-size: 30px;
+  }
+  
+  button {
+    font-size: 24px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #7f5539;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 20px;
+    text-shadow: 1px 1px 2px #000000;
+  }
+  
+  button:hover {
+    background-color: #996633;
+  }
+  
