@@ -1,19 +1,29 @@
-function updateTime() {
+
+  function updateTime() {
     const container = document.getElementById('time');
     const now = new Date();
-    let hours = now.getHours() + 1;
-    let timePeriod;
+    let hours = now.getHours();
+    let timePeriod = "AM";
   
-    if (hours >= 23 || hours < 5) {
-      timePeriod = "ጥዋት";
-    } else if (hours >= 5 && hours < 10) {
-      timePeriod = "ሌሊት";
-    } else if (hours >= 10 && hours < 16) {
-      timePeriod = "ምሽት";
-    } else if (hours >= 17 && hours < 23) {
-      timePeriod = "ቀን";
+    if (hours >= 12) {
+      hours -= 12;
+      timePeriod = "PM";
     }
-  
+
+    if (hours == 0) {
+      hours = 12;
+    }
+
+    if (hours >= 6 && hours < 10) {
+      timePeriod = "ጥዋት";
+    } else if (hours >= 10 && hours < 16) {
+      timePeriod = "ሌሊት";
+    } else if (hours >= 16 && hours < 22) {
+      timePeriod = "ቀን";
+    } else if (hours >= 22 || hours < 6) {
+      timePeriod = "ምሽት";
+    }
+
     let minutes = now.getMinutes();
     if (minutes < 10) {
       minutes = "0" + minutes;
@@ -30,4 +40,3 @@ function updateTime() {
   
   updateTime();
   setInterval(updateTime, 1000);
-  
