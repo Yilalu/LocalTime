@@ -3,16 +3,12 @@ html, body {
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
-    margin: 0;
-    padding: 0;
+    margin: 4px;
+    padding: 25px;
+    padding-top: 0px;
+    padding-bottom: 10px;
     font-family: 'Georgia', serif;
     color: #fff;
-  }
-  
-  .Description {
-    font-size: 2px;
-    text-align:left;
-    margin-left:10px;
   }
   #time {
     color: black;
