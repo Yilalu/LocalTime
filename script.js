@@ -14,6 +14,7 @@ function updateTime() {
   // Set a default time period of "AM" and a Geez number of 0
   let timePeriod = "AM";
   let geezNumber = 0;
+  let timeRange;
 
   // If the hours are greater than or equal to 12, subtract 12 and set the time period to "PM"
   if (hours >= 12) {
@@ -29,14 +30,14 @@ function updateTime() {
   // Set the Geez number based on the hours
   if(hours == 4)
     geezNumber = four;
-  if (hours >= 6 && hours < 10) {
-    timePeriod = "ሌሊት";
-  } else if (hours >= 10 && hours < 16) {
-    timePeriod = "ጥዋት";
-  } else if (hours >= 16 && hours < 22) {
-    timePeriod = "ቀን";
-  } else if (hours >= 22 || hours < 6) {
-    timePeriod = "ምሽት";
+  if ((hours >= 12 || hours <= 5) && timePeriod == 'AM') {
+    timeRange = "ጥዋት";
+  } else if ((hours > 5 && hours <= 11) && timePeriod == 'AM') {
+    timeRange = "ቀን";
+  } else if ((hours > 12 || hours < 5) && timePeriod == 'PM') {
+    timeRange = "ምሽት";
+  } else if ((hours >= 5 || hours < 12) && timePeriod == 'PM') {
+    timeRange = "ሌሊት";
   }
 
   // Get the minutes from the Date object
@@ -56,7 +57,7 @@ function updateTime() {
   }
 
   // Convert the English time to Geez numbers and format the time string
-  const time = englishToGeezNumber(hours) + ":" + englishToGeezNumber(minutes) + ":" + englishToGeezNumber(seconds) + " " + timePeriod;
+  const time = englishToGeezNumber(hours) + ":" + englishToGeezNumber(minutes) + ":" + englishToGeezNumber(seconds) + " " + timeRange;
   
   // Set the text content of the container element to the formatted time string
   container.textContent = time;
