@@ -13,7 +13,6 @@ function updateTime() {
   
   // Set a default time period of "AM" and a Geez number of 0
   let timePeriod = "AM";
-  let geezNumber = 0;
   let timeRange;
 
   // If the hours are greater than or equal to 12, subtract 12 and set the time period to "PM"
@@ -28,8 +27,6 @@ function updateTime() {
   }
 
   // Set the Geez number based on the hours
-  if(hours == 4)
-    geezNumber = four;
   if ((hours >= 12 || hours <= 5) && timePeriod == 'AM') {
     timeRange = "ጥዋት";
   } else if ((hours > 5 && hours <= 11) && timePeriod == 'AM') {
