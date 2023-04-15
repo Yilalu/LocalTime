@@ -1,5 +1,5 @@
 html, body {
-    background-image: url('flag.jpg');
+    background-color: rgba(98, 118, 164);
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
@@ -9,10 +9,19 @@ html, body {
     color: #fff;
   }
   
+  .Description {
+    font-size: 2px;
+    text-align:left;
+    margin-left:10px;
+  }
+  #time {
+    color: black;
+  }
   .container {
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 20px;
-    border-radius: 10px;
+    
+    background-image: url('flag.jpg');
+    padding: -10px;
+    border-radius: 10x;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
     margin: 100px auto;
     max-width: 500px;
