@@ -3,11 +3,14 @@ function updateTime() {
   // Get the container element with id 'time'
   const container = document.getElementById('time');
   
+   var EthioTimeInGeez = new Date().toLocaleString("en-US", {
+    timeZone: "Africa/Addis_Ababa" });
+  
   // Create a new Date object for the current time
-  const now = new Date();
+  const now = new Date(EthioTimeInGeez);
   
   // Get the hours from the Date object and add 1 (to adjust for Ethiopian time)
-  let hours = now.getHours() + 1;
+  let hours = now.getHours() - 6;
   
   // Set a default time period of "AM" and a Geez number of 0
   let timePeriod = "AM";
