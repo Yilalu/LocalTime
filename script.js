@@ -27,13 +27,13 @@ function updateTime() {
   }
 
   // Set the Geez number based on the hours
-  if ((hours >= 12 || hours <= 5) && timePeriod == 'AM') {
+  if ((hours >= 12 || hours <= 6) && timePeriod == 'AM') {
     timeRange = "ጥዋት";
-  } else if ((hours > 5 && hours <= 11) && timePeriod == 'AM') {
+  } else if ((hours > 6 && hours <= 11) && timePeriod == 'AM') {
     timeRange = "ቀን";
-  } else if ((hours > 12 || hours < 5) && timePeriod == 'PM') {
+  } else if ((hours > 12 || hours < 6) && timePeriod == 'PM') {
     timeRange = "ምሽት";
-  } else if ((hours >= 5 || hours < 12) && timePeriod == 'PM') {
+  } else if ((hours >= 6 || hours < 12) && timePeriod == 'PM') {
     timeRange = "ሌሊት";
   }
 
