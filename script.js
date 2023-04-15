@@ -3,8 +3,7 @@ function updateTime() {
   // Get the container element with id 'time'
   const container = document.getElementById('time');
   
-   var EthioTimeInGeez = new Date().toLocaleString("en-US", {
-    timeZone: "Africa/Addis_Ababa" });
+   var EthioTimeInGeez = new Date().toLocaleString("en-US", {timeZone: "Africa/Addis_Ababa" });
   
   // Create a new Date object for the current time
   const now = new Date(EthioTimeInGeez);
