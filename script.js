@@ -22,19 +22,18 @@ function updateTime() {
   }
 
   // If the hours are 0, set them to 12
-  if (hours == 0) {
-    hours = 12;
+  if (hours <= 0) {
+    hours+= 12;
   }
-
   // Set the Geez number based on the hours
   if ((hours >= 12 || hours <= 6) && timePeriod == 'AM') {
     timeRange = "ጥዋት";
-  } else if ((hours > 6 && hours <= 11) && timePeriod == 'AM') {
-    timeRange = "ቀን";
+  } else if ((hours > 6 || hours <= 11) && timePeriod == 'AM') {
+    timeRange = "ሌሊት";
   } else if ((hours > 12 || hours < 6) && timePeriod == 'PM') {
     timeRange = "ምሽት";
   } else if ((hours >= 6 || hours < 12) && timePeriod == 'PM') {
-    timeRange = "ሌሊት";
+    timeRange = "ቀን";
   }
 
   // Get the minutes from the Date object
