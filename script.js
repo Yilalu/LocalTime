@@ -2,6 +2,7 @@
 function updateTime() {
   // Get the container element with id 'time'
   const container = document.getElementById('time');
+  const calculateKen = document.getElementById("ken");
   
    var EthioTimeInGeez = new Date().toLocaleString("en-US", {timeZone: "Africa/Addis_Ababa" });
   
@@ -27,13 +28,13 @@ function updateTime() {
   }
   // Set the Geez number based on the hours
   if ((hours >= 12 || hours < 6) && timePeriod == 'AM') {
-    timeRange = "ጥዋት";
+    timeRange = "ነግህ";
   } else if ((hours >= 6 || hours < 12) && timePeriod == 'AM') {
     timeRange = "ሌሊት";
   } else if ((hours >= 12 || hours < 6) && timePeriod == 'PM') {
-    timeRange = "ምሽት";
+    timeRange = "ምሲት";
   } else if ((hours >= 6 || hours < 12) && timePeriod == 'PM') {
-    timeRange = "ቀን";
+    timeRange = "መአልት";
   }
 
   // Get the minutes from the Date object
@@ -51,12 +52,40 @@ function updateTime() {
   if (seconds < 10) {
     seconds = "0" + seconds;
   }
+  let day = now.getDay();
+  let ken = 'ሰኞ';
+  if(day == 0)
+    ken = 'እሁድ';
+  if (day == 1) {
+    ken ='ሰኑይ';
+  }
+  else if (day == 2) {
+    ken ='ሠሉስ';
+  }
+  else if (day == 3) {
+    ken = 'ረቡዕ';
+  }
+  else if (day == 4) {
+    ken  ='ሐሙስ';
+  }
+  else if (day == 5) {
+    ken ='አርብ';
+  }
+  else if(day == 6) { 
+    ken  = 'ቀዳሚ';
+  }
+
+
+
+
 
   // Convert the English time to Geez numbers and format the time string
   const time = englishToGeezNumber(hours) + ":" + englishToGeezNumber(minutes) + ":" + englishToGeezNumber(seconds) + " " + timeRange;
   
   // Set the text content of the container element to the formatted time string
   container.textContent = time;
+  calculateKen.textContent = ken
+
 }
 
 // Function to convert English numbers to Geez numbers
