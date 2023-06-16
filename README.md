@@ -1,7 +1,14 @@
 # EthiopianLocaLtIM
-When I was looking for Ethiopian local time on the website I coud not able to get.
-It was irrelevant for me the time I get, then I start to write this script to make sure I can have
-right time track of Ethiopia. 
+While browsing the web, I found it increasingly difficult to accurately track the local time in Ethiopia. The available time displayed held little relevance for me, and it quickly became evident that a solution was needed. This realization sparked the beginning of an enlightening journey, leading me to develop a script designed to accurately track Ethiopian time. This endeavor not only enriched my technical prowess but also gave me a unique cultural insight into the Geez language.
 
-Intially, my intention was to develop just a time counter, but after I start working I chnaged my mind to make the counter in Geez language
-Finally, I made it.
+Initially, my ambition was simple: create a basic time counter using the core building blocks of web development - HTML, CSS, and JavaScript. I started by structuring the webpage with HTML, defining the contents and layout. Here, I introduced elements that would display the time, meticulously organized to enhance the user's viewing experience.
+
+Next, I employed CSS to breathe life into the webpage, imbuing it with style and visual appeal. Colors, spacing, and font were all carefully chosen to create a pleasing aesthetic. The key, I found, was to strike a balance between utility and design. The webpage had to be visually appealing, yet the display should not overshadow the primary function of providing accurate Ethiopian time.
+
+The beating heart of this project was JavaScript. JavaScript allowed me to control the dynamic aspects of the webpage and was integral to developing the time counter. By leveraging built-in methods and date objects, I was able to constantly fetch and update the Ethiopian time on the webpage.
+
+However, as I delved deeper into this project, I decided to make a shift. I aimed to display the counter in the Geez language, one of Ethiopia's most historically significant languages. The challenge here was not only to adopt a new linguistic system but also to represent this system digitally. The choice to display numbers in the Geez language added a layer of complexity to the project, yet it also made it profoundly personal and culturally rich.
+
+To address this, I leveraged UNICODE, a universal character encoding standard. UNICODE has been instrumental in ensuring the accurate representation and compatibility of text in various languages across different systems and platforms. It offered a unique opportunity to convert English numbers into Geez numbers. Through careful implementation and meticulous coding, I incorporated this feature into the JavaScript, ensuring seamless conversion and accurate display of the Geez numerals.
+
+Looking back, the journey from a simple time tracker to a culturally embedded Ethiopian time counter was filled with challenges and insights. Not only did I get to refine my skills in HTML, CSS, and JavaScript, but I also delved into the cultural significance of the Geez language and the technicalities of UNICODE. This journey has shown me that web development isn't just about creating functional websites; it's about how we can incorporate cultural and historical elements to create something that is technologically sophisticated and culturally meaningful. In the end, the Ethiopian time counter I developed is not just a testament to my technical skills, but also a tribute to the richness of Ethiopian culture.
